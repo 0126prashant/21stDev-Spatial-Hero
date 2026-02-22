@@ -6,97 +6,97 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 // Generate a random number between min and max
 const random = (min: number, max: number) => Math.random() * (max - min) + min;
 
-// 16 Premium, clean, light-theme images (Minimalist, Tech, Architecture, Abstract)
+// Product photography with organic blob shapes - vibrant, clear subjects
 const initialImages = [
   {
-    src: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=2667",
-    className: "w-[240px] h-[340px] md:w-[320px] md:h-[420px] rounded-[40px]",
-    initialRotate: -4,
-    duration: 3,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564",
-    className: "w-[260px] h-[220px] md:w-[340px] md:h-[280px] rounded-full",
-    initialRotate: 3,
-    duration: 4.5,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=2670",
-    className: "w-[180px] h-[180px] md:w-[240px] md:h-[240px] rounded-[24px]",
-    initialRotate: 6,
+    src: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=2680",
+    className: "w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-full",
+    initialRotate: -3,
     duration: 3.5,
   },
   {
-    src: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=2787",
-    className: "w-[240px] h-[320px] md:w-[280px] md:h-[400px] rounded-[60px] md:rounded-[100px]",
-    initialRotate: -3,
-    duration: 4,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=2669",
-    className: "w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-[30%_70%_70%_30%/30%_30%_70%_70%]",
-    initialRotate: 8,
-    duration: 3.8,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1620121692029-d088224ddc74?q=80&w=2832",
-    className: "w-[260px] h-[180px] md:w-[320px] md:h-[220px] rounded-tl-[80px] rounded-br-[80px]",
-    initialRotate: -5,
-    duration: 3.2,
-  },
-  {
-    src: "https://images.unsplash.com/photo-1491891523322-7541e2634e00?q=80&w=2670",
-    className: "w-[220px] h-[280px] md:w-[280px] md:h-[360px] rounded-[50px]",
+    src: "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=2600",
+    className: "w-[240px] h-[280px] md:w-[300px] md:h-[340px] rounded-[40%_60%_60%_40%/60%_30%_70%_40%]",
     initialRotate: 4,
     duration: 4.2,
   },
   {
-    src: "https://images.unsplash.com/photo-1604871000636-074fa5117945?q=80&w=2787",
-    className: "w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-full",
-    initialRotate: -6,
+    src: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=2670",
+    className: "w-[220px] h-[220px] md:w-[280px] md:h-[280px] rounded-[30%_70%_70%_30%/30%_30%_70%_70%]",
+    initialRotate: -5,
+    duration: 3.8,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1484704849700-f032a568e944?q=80&w=2670",
+    className: "w-[260px] h-[200px] md:w-[320px] md:h-[260px] rounded-[50px]",
+    initialRotate: 6,
+    duration: 4.0,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=2574",
+    className: "w-[180px] h-[240px] md:w-[240px] md:h-[300px] rounded-full",
+    initialRotate: 2,
     duration: 3.6,
   },
   {
-    src: "https://images.unsplash.com/photo-1507149833265-60c372daea22?q=80&w=2676",
-    className: "w-[200px] h-[300px] md:w-[260px] md:h-[380px] rounded-[30px]",
-    initialRotate: 2,
-    duration: 4.8,
+    src: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=2670",
+    className: "w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-[40%_60%_50%_50%/50%_50%_50%_50%]",
+    initialRotate: -4,
+    duration: 4.5,
   },
   {
-    src: "https://images.unsplash.com/photo-1506744626753-1fa7603e4c62?q=80&w=2600",
-    className: "w-[280px] h-[200px] md:w-[360px] md:h-[260px] rounded-tr-[60px] rounded-bl-[60px]",
-    initialRotate: -2,
+    src: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?q=80&w=2670",
+    className: "w-[200px] h-[280px] md:w-[260px] md:h-[340px] rounded-[60px]",
+    initialRotate: 7,
     duration: 3.4,
   },
   {
-    src: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670", // Robot/Tech light
-    className: "w-[160px] h-[220px] md:w-[200px] md:h-[280px] rounded-[20px]",
-    initialRotate: 7,
+    src: "https://images.unsplash.com/photo-1583394838336-acd977736f90?q=80&w=2584",
+    className: "w-[220px] h-[220px] md:w-[280px] md:h-[280px] rounded-full",
+    initialRotate: -2,
     duration: 4.1,
   },
   {
-    src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2670", // Robot hand
-    className: "w-[220px] h-[220px] md:w-[280px] md:h-[280px] rounded-full",
-    initialRotate: -4,
+    src: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=2688",
+    className: "w-[260px] h-[200px] md:w-[320px] md:h-[260px] rounded-[35%_65%_65%_35%/35%_35%_65%_65%]",
+    initialRotate: 5,
     duration: 3.9,
   },
   {
-    src: "https://images.unsplash.com/photo-1555255707-c07966088b7b?q=80&w=2670", // Data viz
-    className: "w-[280px] h-[320px] md:w-[340px] md:h-[400px] rounded-[40px]",
-    initialRotate: 5,
-    duration: 4.6,
+    src: "https://images.unsplash.com/photo-1585155770960-a6eb1c2b3d3d?q=80&w=2574",
+    className: "w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-full",
+    initialRotate: -6,
+    duration: 4.3,
   },
   {
-    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670", // Circuit light
-    className: "w-[260px] h-[260px] md:w-[300px] md:h-[300px] rounded-bl-[80px] rounded-tr-[80px]",
-    initialRotate: -3,
+    src: "https://images.unsplash.com/photo-1560343090-f0409e92791a?q=80&w=2564",
+    className: "w-[240px] h-[280px] md:w-[300px] md:h-[340px] rounded-[45%_55%_60%_40%/55%_45%_55%_45%]",
+    initialRotate: 3,
     duration: 3.7,
   },
   {
-    src: "https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2670", // AI Brain
-    className: "w-[220px] h-[180px] md:w-[280px] md:h-[240px] rounded-[30px]",
-    initialRotate: 8,
-    duration: 4.0,
+    src: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2670",
+    className: "w-[220px] h-[220px] md:w-[280px] md:h-[280px] rounded-[50px]",
+    initialRotate: -7,
+    duration: 4.4,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1611312449408-fcece27cdbb7?q=80&w=2670",
+    className: "w-[200px] h-[260px] md:w-[260px] md:h-[320px] rounded-full",
+    initialRotate: 4,
+    duration: 3.3,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=2599",
+    className: "w-[240px] h-[240px] md:w-[300px] md:h-[300px] rounded-[40%_60%_55%_45%/50%_50%_50%_50%]",
+    initialRotate: -3,
+    duration: 4.6,
+  },
+  {
+    src: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=2680",
+    className: "w-[220px] h-[200px] md:w-[280px] md:h-[260px] rounded-[60px]",
+    initialRotate: 6,
+    duration: 3.2,
   },
   {
     src: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=2670", // AI Face
