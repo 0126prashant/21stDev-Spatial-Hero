@@ -278,16 +278,16 @@ export default function FluidSpatialHero() {
           </p>
         </div>
 
-        {/* Search Box - True Liquid Glass Effect (Perfected SS-2 Light Theme) */}
-        <div className="pointer-events-auto relative w-[90vw] max-w-[800px] p-5 md:p-6 rounded-[2.5rem] bg-white/40 backdrop-blur-3xl border border-white/70 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.05),0_0_0_1px_rgba(255,255,255,1),inset_0_2px_10px_rgba(255,255,255,1),inset_0_-4px_12px_rgba(0,0,0,0.02)] flex flex-col gap-4 group transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.08),0_0_0_1px_rgba(255,255,255,1),inset_0_2px_10px_rgba(255,255,255,1),inset_0_-4px_12px_rgba(0,0,0,0.02)] hover:bg-white/50">
+        {/* Search Box - Ultra-Soft Liquid Glass (SS-2 Inspired) */}
+        <div className="pointer-events-auto relative w-[90vw] max-w-[800px] p-5 md:p-6 rounded-[2.5rem] bg-white/30 backdrop-blur-2xl border border-white/40 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.03),0_0_1px_rgba(255,255,255,0.8),inset_0_1px_2px_rgba(255,255,255,0.9)] flex flex-col gap-4 group transition-all duration-500 hover:bg-white/35 hover:shadow-[0_25px_60px_-15px_rgba(0,0,0,0.04),0_0_1px_rgba(255,255,255,0.9),inset_0_1px_2px_rgba(255,255,255,1)]">
           
-          {/* Inner glossy highlight */}
-          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-white/90 via-white/30 to-transparent pointer-events-none opacity-90 mix-blend-overlay" />
+          {/* Inner glossy highlight - softer and more subtle */}
+          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-white/60 via-white/10 to-transparent pointer-events-none opacity-70" />
           
           {/* Text Input */}
           <textarea 
             placeholder="Describe your design..."
-            className="w-full bg-transparent text-gray-900 placeholder:text-gray-400 text-xl md:text-2xl font-medium outline-none resize-none min-h-[100px] md:min-h-[120px] relative z-10 pt-2 selection:bg-indigo-500/20"
+            className="w-full bg-transparent text-gray-800 placeholder:text-gray-400/70 text-xl md:text-2xl font-normal outline-none resize-none min-h-[100px] md:min-h-[120px] relative z-10 pt-2 selection:bg-indigo-400/15"
             style={{ cursor: "none" }} // keep custom cursor vibe
           />
 
@@ -295,33 +295,32 @@ export default function FluidSpatialHero() {
           <div className="flex items-center justify-between relative z-10 mt-2">
             {/* Left Actions */}
             <div className="flex items-center gap-2 md:gap-3">
-              <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/70 hover:bg-white border border-gray-200/50 shadow-[0_2px_10px_rgba(0,0,0,0.05)] flex items-center justify-center transition-colors text-gray-700">
+              <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/60 hover:bg-white/80 border border-gray-200/30 shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-center justify-center transition-all text-gray-600 hover:text-gray-800">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
               </button>
-              <button className="h-10 md:h-12 px-4 md:px-5 rounded-full bg-white/70 hover:bg-white border border-[#f472b6]/50 shadow-[0_2px_10px_rgba(0,0,0,0.05)] flex items-center gap-2 transition-colors text-gray-700">
+              <button className="h-10 md:h-12 px-4 md:px-5 rounded-full bg-white/60 hover:bg-white/80 border border-gray-200/30 shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-center gap-2 transition-all text-gray-600 hover:text-gray-800">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                <span className="font-semibold text-sm">App</span>
+                <span className="font-medium text-sm">App</span>
               </button>
             </div>
 
             {/* Right Actions */}
             <div className="flex items-center gap-2 md:gap-3">
-              <button className="h-10 md:h-12 px-4 md:px-5 rounded-full bg-white/90 hover:bg-white border border-gray-200 flex items-center gap-2 transition-colors text-gray-800 shadow-[0_2px_10px_rgba(0,0,0,0.05)]">
+              <button className="h-10 md:h-12 px-4 md:px-5 rounded-full bg-white/70 hover:bg-white/90 border border-gray-200/40 flex items-center gap-2 transition-all text-gray-700 hover:text-gray-900 shadow-[0_2px_8px_rgba(0,0,0,0.03)]">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#sparkle-gradient)"/>
                   <defs>
                     <linearGradient id="sparkle-gradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#3b82f6" />
-                      <stop offset="0.5" stopColor="#10b981" />
-                      <stop offset="1" stopColor="#f59e0b" />
+                      <stop stopColor="#10b981" />
+                      <stop offset="1" stopColor="#3b82f6" />
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="font-semibold text-sm tracking-wide">3.0 Flash</span>
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-400 ml-0.5 md:ml-1 shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50 ml-0.5 md:ml-1"><path d="M6 9l6 6 6-6"/></svg>
+                <span className="font-medium text-sm">3.0 Flash</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-400 ml-0.5 md:ml-1 shadow-[0_0_6px_rgba(251,191,36,0.5)]" />
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-40 ml-0.5 md:ml-1"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-900 hover:bg-gray-800 border border-transparent flex items-center justify-center transition-colors text-white shadow-[0_4px_12px_rgba(0,0,0,0.15)]">
+              <button className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-800 hover:bg-gray-900 border border-gray-700/50 flex items-center justify-center transition-all text-white shadow-[0_3px_10px_rgba(0,0,0,0.12)]">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
