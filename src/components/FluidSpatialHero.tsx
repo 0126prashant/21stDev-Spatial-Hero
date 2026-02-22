@@ -262,20 +262,32 @@ export default function FluidSpatialHero() {
         ))}
       </motion.div>
 
-      {/* Liquid Glass Search Box */}
+      {/* Liquid Glass Search Box & Header */}
       <motion.div 
-        className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none"
+        className="absolute inset-0 flex flex-col items-center justify-center z-20 pointer-events-none gap-8"
         style={{ x: boxTranslateX, y: boxTranslateY }}
       >
-        <div className="pointer-events-auto relative w-[90vw] max-w-[800px] p-6 rounded-[2rem] bg-[#1a1a1c]/80 backdrop-blur-2xl border border-white/10 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.3),inset_0_1px_1px_rgba(255,255,255,0.1)] flex flex-col gap-4 group">
+        {/* Header */}
+        <div className="text-center flex flex-col items-center mt-[-10vh]">
+          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-gray-900 to-gray-500 drop-shadow-sm mb-4">
+            NEXUS
+          </h1>
+          <p className="text-gray-600 font-medium text-lg md:text-xl max-w-lg text-center leading-relaxed drop-shadow-sm">
+            Design the future with AI-powered spatial generation. <br className="hidden md:block"/>
+            Describe your vision and watch it come to life in real-time.
+          </p>
+        </div>
+
+        {/* Search Box - Light Liquid Glass Effect */}
+        <div className="pointer-events-auto relative w-[90vw] max-w-[800px] p-6 rounded-[2.5rem] bg-white/20 backdrop-blur-2xl border border-white/50 shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1),inset_0_8px_20px_rgba(0,0,0,0.06),inset_0_-8px_24px_rgba(255,255,255,1),inset_0_1px_1px_rgba(0,0,0,0.1)] flex flex-col gap-4 group transition-all duration-500 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15),inset_0_8px_20px_rgba(0,0,0,0.04),inset_0_-8px_24px_rgba(255,255,255,1),inset_0_1px_1px_rgba(0,0,0,0.1)]">
           
-          {/* Inner ambient glow for liquid effect */}
-          <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/5 to-transparent pointer-events-none" />
+          {/* Inner glossy highlight */}
+          <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-b from-white/60 to-transparent pointer-events-none opacity-50" />
           
           {/* Text Input */}
           <textarea 
             placeholder="Describe your design..."
-            className="w-full bg-transparent text-white/90 placeholder:text-white/30 text-2xl font-medium outline-none resize-none min-h-[120px] relative z-10 pt-2"
+            className="w-full bg-transparent text-gray-900 placeholder:text-gray-500 text-2xl font-medium outline-none resize-none min-h-[120px] relative z-10 pt-2 selection:bg-indigo-200"
             style={{ cursor: "none" }} // keep custom cursor vibe
           />
 
@@ -283,33 +295,33 @@ export default function FluidSpatialHero() {
           <div className="flex items-center justify-between relative z-10">
             {/* Left Actions */}
             <div className="flex items-center gap-3">
-              <button className="w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center transition-colors text-white shadow-sm">
+              <button className="w-12 h-12 rounded-full bg-white/60 hover:bg-white border border-white/40 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex items-center justify-center transition-colors text-gray-700">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 5v14M5 12h14"/></svg>
               </button>
-              <button className="h-12 px-5 rounded-full bg-white/5 hover:bg-white/10 border border-[#f472b6]/30 flex items-center gap-2 transition-colors text-white shadow-sm">
+              <button className="h-12 px-5 rounded-full bg-white/60 hover:bg-white border border-[#f472b6]/40 shadow-[0_4px_12px_rgba(0,0,0,0.05)] flex items-center gap-2 transition-colors text-gray-700">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
-                <span className="font-medium text-sm">App</span>
+                <span className="font-semibold text-sm">App</span>
               </button>
             </div>
 
             {/* Right Actions */}
             <div className="flex items-center gap-3">
-              <button className="h-12 px-5 rounded-full bg-[#2a2a2e]/80 hover:bg-[#333338] border border-white/5 flex items-center gap-2 transition-colors text-white shadow-inner backdrop-blur-md">
+              <button className="h-12 px-5 rounded-full bg-gray-900 hover:bg-gray-800 border border-gray-700 flex items-center gap-2 transition-colors text-white shadow-lg">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="url(#sparkle-gradient)"/>
                   <defs>
                     <linearGradient id="sparkle-gradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#3b82f6" />
-                      <stop offset="0.5" stopColor="#10b981" />
-                      <stop offset="1" stopColor="#f59e0b" />
+                      <stop stopColor="#60a5fa" />
+                      <stop offset="0.5" stopColor="#34d399" />
+                      <stop offset="1" stopColor="#fbbf24" />
                     </linearGradient>
                   </defs>
                 </svg>
-                <span className="font-medium text-sm">3.0 Flash</span>
-                <div className="w-1.5 h-1.5 rounded-full bg-amber-400 ml-1" />
+                <span className="font-semibold text-sm tracking-wide">3.0 Flash</span>
+                <div className="w-1.5 h-1.5 rounded-full bg-amber-400 ml-1 shadow-[0_0_8px_rgba(251,191,36,0.8)]" />
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-50 ml-1"><path d="M6 9l6 6 6-6"/></svg>
               </button>
-              <button className="w-12 h-12 rounded-full bg-white/5 hover:bg-white/10 border border-white/5 flex items-center justify-center transition-colors text-white shadow-sm">
+              <button className="w-12 h-12 rounded-full bg-gray-900 hover:bg-gray-800 border border-gray-700 flex items-center justify-center transition-colors text-white shadow-lg">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
               </button>
             </div>
